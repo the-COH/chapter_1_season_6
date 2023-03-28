@@ -6,6 +6,8 @@ Repo:  **https://github.com/fazelpejmanfar/divine-men-of-canto**
 
 Divine Men of Canto is an NFT Collection where user can Build their own NFT from variety of traits and Name it.
 
+![Divine Men of Canto](https://www.divinemenofcanto.xyz/assets/divineman-bg.jpg)
+
 
 ## **Build Your NFT**
 Divine Men of Canto have 9 layer and 171 total Traits and user can choose between variety of traits to build their NFT.\
