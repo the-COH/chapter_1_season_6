@@ -1,6 +1,5 @@
 # **Divine Men of CANTO**
 
-Website:  **https://divinemenofcanto.xyz/** \
 Repo:  **https://github.com/fazelpejmanfar/divine-men-of-canto**
 
 
