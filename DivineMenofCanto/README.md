@@ -1,7 +1,7 @@
 # **Divine Men of CANTO**
 
-Repo:  **https://github.com/fazelpejmanfar/divine-men-of-canto**
-
+Repo:  **https://github.com/fazelpejmanfar/divine-men-of-canto** \
+Website:  **https://divinemenofcanto.xyz/**
 
 
 Divine Men of Canto is an NFT Collection where user can Build their own NFT from variety of traits and Name it.
@@ -15,7 +15,8 @@ Our off-chain implementation will not allow duplicate NFT or NFT name to be buil
 best thing about off-chain minting is that users can build their NFTs without any limitation compared to on-chain NFTs.
 
 ## **Staking**
-After 30% of collection sold, We will Launching Staking where you can Stake your nft to get our token as reward.
+After 30% of collection sold, We will Launching Staking where you can Stake your nft to get our token as reward.\
+Each NFT will get 500 Token as reward per day.
 
 
 ## **Trait Marketplace**
