@@ -50,7 +50,7 @@ const title = [
   'Metal',
   'Glass',
   'Swamp',
-  'Eyeglasse',
+  'Eyeglasses',
   'Electricity',
   'Life',
   'Human',
@@ -72,12 +72,12 @@ const options = [
   { value: 'mintLava', label: 'FireEarth' },
   { value: 'mintMetal', label: 'FireRock' },
   { value: 'mintGlass', label: 'SandFire' },
-  { value: 'mintSwamp', label: 'PantMud' },
-  { value: 'mintEyeglasse', label: 'GlassGlass' },
+  { value: 'mintSwamp', label: 'PlantMud' },
+  { value: 'mintEyeglasses', label: 'GlassGlass' },
   { value: 'mintElectricity', label: 'EnergyMetal' },
   { value: 'mintLife', label: 'EnergyMud' },
   { value: 'mintHuman', label: 'LifeEarth' },
-  { value: 'mintNerd', label: 'EyeglasseHuman' },
+  { value: 'mintNerd', label: 'EyeglassesHuman' },
   { value: 'mintComputer', label: 'ElectricityNerd' },
   { value: 'mintInternet', label: 'ComputerComputer' },
   { value: 'mintBlockchain', label: 'ComputerInternet' },
@@ -99,7 +99,7 @@ const elementsOptions = [
   { value: 12, label: 'Metal' },
   { value: 13, label: 'Glass' },
   { value: 14, label: 'Swamp' },
-  { value: 15, label: 'Eyeglasse' },
+  { value: 15, label: 'Eyeglasses' },
   { value: 16, label: 'Electricity' },
   { value: 17, label: 'Life' },
   { value: 18, label: 'Human' },
@@ -178,10 +178,8 @@ const Game = () => {
       const contract1 = new ethers.Contract(tokenAddress, Token.abi, signer)
       const contract2 = new ethers.Contract(nftaddress, NFT.abi, signer)
       const account = await signer.getAddress()
-      console.log(account)
       const value = await contract1.allowance(account, nftaddress)
       const amount = (value/10**18).toString()
-      console.log(amount/10**18)
       if (amount <= 40) {
         setAllowance(false)
       } else {
@@ -326,6 +324,7 @@ const Game = () => {
       const signer = provider.getSigner();
       const contract2 = new ethers.Contract(nftaddress, NFT.abi, signer);
       const mintelement = element.toString();
+      console.log(mintelement)
       try {
         const transaction = await contract2[mintelement]();
         await transaction.wait()
