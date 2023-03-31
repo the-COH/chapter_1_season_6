@@ -74,7 +74,7 @@ const Profile = () => {
   const [treasury, setTreasury] = useState(0)
   const [nftaddress, setnftaddress] = useState('')
   const [nftmarketaddress, setnftmarketaddress] = useState('')
-  
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     searchnetwork()
   })
@@ -155,6 +155,7 @@ const Profile = () => {
 
   }
   async function myElements() {
+    setLoading(true)
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const signer = provider.getSigner()
@@ -243,11 +244,18 @@ const Profile = () => {
     } catch (e){
       console.log(e)
     }
+    setLoading(false)
   }
 
   return (
-    <div className=" ">
+    <div className="bg-gray-700 h-full ">
       <Header />
+      { loading ?
+         (<div className=" flex items-center justify-center h-screen">
+            <div className="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">loading...</div>
+          </div>
+          ):
+          (
         <div className='m-auto p-2 bg-gray-700 '>
           <div className={style.bannerImageContainer}>
             <div className=" flex">
@@ -313,7 +321,8 @@ const Profile = () => {
           </div>
           </div>
           
-        </div>
+        </div>)
+      }
     </div>
   )
 }

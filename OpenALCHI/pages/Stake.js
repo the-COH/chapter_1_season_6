@@ -492,7 +492,7 @@ const Stake = () => {
           <div className="bg-gray-800 h-full p-2 border-light bg-light block w-full rounded-2xl border-[1px] py-2 font-light leading-5 outline-none focus:outline-none focus-visible:outline-none">
             NFT Balance:
           
-          <div className="flex w-60 ">
+          <div className="m-auto justify-between flex flex-wrap w-60 ">
             {NftBanalce?.map((item, index) => (
               <NftElement key={index} item={item} />
             ))}
@@ -527,7 +527,7 @@ const Stake = () => {
                         options={elementsOptions}
                       />
                     </div>
-                    <div class=" mb-6">
+                    <div class="flex flex-wrap m-auto justify-center mb-6">
                       <input
                         type="number"
                         value={NFTamout}
@@ -682,7 +682,7 @@ const Stake = () => {
         <div className="bg-gray-800 h-full p-2 border-light bg-light block w-full rounded-2xl border-[1px] py-2 font-light leading-5 outline-none focus:outline-none focus-visible:outline-none">
             Staked NFT:
             {totalstakedByUser ? (
-              <div className="flex flex-wrap w-30 p-2">
+              <div className="m-auto justify-between flex flex-wrap w-60">
                 {totalstakedByUser.map((i, key) => (
                   <div className='bg-gray-500 border rounded-lg m-1 shadow-sm text-gray-200' key={key}>
                     <span className="flex items-center justify-center p-2 text-xs">

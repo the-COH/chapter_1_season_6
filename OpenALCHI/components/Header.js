@@ -78,20 +78,22 @@ const Header =()=>{
                             width={40}
                             alt=''
                             />
-                          <span className="w-64 ml-3">OpenALCH</span>
+                          <span className=" ml-3">OpenALCH</span>
                           </Link>
                       </li>
+                      <div className='m-auto inline-flex items-center justify-between'>
                       {address ? (
                         <>
                         <li>
                         <ol className="flex items-center mx-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                           
-                          <Select
-                            value={networkId}
-                            styles={customStyles}
-                            onChange={handleChange}
-                            options={supportChainIds}
-                          />
+                            <Select
+                              value={networkId}
+                              styles={customStyles}
+                              onChange={handleChange}
+                              options={supportChainIds}
+                            />
+                          
                         </ol>
                       </li>
                         <li>
@@ -126,6 +128,8 @@ const Header =()=>{
                             Connect Wallet
                           </button></div>
                       )}
+                      </div>
+                      
                       
                   </ul>
     </nav>
