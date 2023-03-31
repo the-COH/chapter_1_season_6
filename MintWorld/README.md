@@ -7,6 +7,6 @@ We are using blockchain technology as a means to give gamers what they were alwa
 MintWorld is community owned and governed through multiple city DAOs, making the core users at the heart of decision-making for the release of future game features, mechanics, and developments specifically for each city that is launched.
 Above else, we put the fun at the core of the gaming experience.
 
-Website: [MintWorld](https://mintworldgame.com/)
-Hackathon Demo: [Click here](https://gateway.lighthouse.storage/ipfs/QmUeTdV6dRMJKdrg1dMu2MS6bYtwDdzq5rQJqPLz3U5EKc/)
-Smart Contracts: [Contracts](https://github.com/Tisi22/canto-hackathon-MintWorld)
+* Website: [MintWorld](https://mintworldgame.com/)
+* Hackathon Demo: [Click here](https://gateway.lighthouse.storage/ipfs/QmUeTdV6dRMJKdrg1dMu2MS6bYtwDdzq5rQJqPLz3U5EKc/)
+* Smart Contracts: [Contracts](https://github.com/Tisi22/canto-hackathon-MintWorld)
