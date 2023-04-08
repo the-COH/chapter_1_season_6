@@ -16,7 +16,6 @@ const Header =()=>{
     const supportChainIds = [{ value: 7700, label: 'Canto' }, { value: 7701, label: 'CantoTestnet' }];
     useEffect(() => {
         searchnetwork()
-        console.log(networkId)
       },[!networkId])
       useEffect(() => {
         const mediaQuery = window.matchMedia('(min-width: 768px)');
@@ -31,7 +30,7 @@ const Header =()=>{
           window.ethereum.on('accountsChanged', function (accounts) {
           searchnetwork()
         })
-        window.ethereum.on('networkChanged', function(networkId){
+        window.ethereum.on('chainChanged', function(networkId){
           searchnetwork()
         });
         } catch (error) {
@@ -79,7 +78,7 @@ const Header =()=>{
           setIsMenuHidden(!isMenuHidden);
         }   
     return <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600" aria-label="Sidebar">     
-              <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+              <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <Image 
                   className="h-8 mr-3 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -87,7 +86,7 @@ const Header =()=>{
                   alt=''
                   />
                 </Link>
-              <div class="flex md:order-2">
+              <div className="flex md:order-2">
                   {address ? (
                     <span >  </span>
                   ): (
@@ -96,13 +95,13 @@ const Header =()=>{
                             Connect Wallet
                           </button>
                   ) }
-                  <button data-collapse-toggle="navbar-sticky" onClick={handleClick} class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
+                  <button data-collapse-toggle="navbar-sticky" onClick={handleClick} className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                    <span className="sr-only">Open main menu</span>
                     <CgFormatJustify size={42} />
                   </button>
               </div>
-              <div class="hidden md:block">
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+              <div className="hidden md:block">
+                <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                   <ul className="inline-flex items-center space-x-1 md:space-x-3 sm:mb-0">
                           
                           <div className='m-auto inline-flex items-center justify-between'>
@@ -157,8 +156,8 @@ const Header =()=>{
                   </ul>
                 </div>
               </div>
-              <div class={isMenuHidden ? 'hidden ' : ''} id="mobile-menu">
-                <div class=" px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div className={isMenuHidden ? 'hidden ' : ''} id="mobile-menu">
+                <div className=" px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <ul className=" items-center space-x-1 md:space-x-3 sm:mb-0">
                   
                   {address ? (

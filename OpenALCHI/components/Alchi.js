@@ -7,23 +7,7 @@ import fire from "../assets/fire.png"
 import energy from "../assets/energy.png"
 import { useWeb3, useSwitchNetwork } from '@3rdweb/hooks'
 
-const style = {
-  wrapper: `relative `,
-  container: ` before:content-[''] before:bg-red-800 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('../assets/fullmetal.png')] before:bg-cover before:bg-center before:opacity-60 before:blur`,
-  contentWrapper: `m-4  flex relative  flex-wrap items-center`,
-  copyContainer: ` w-1/2`,
-  title: `relative text-white text-[46px] font-semibold`,
-  description: `text-[#151b22] container-[400px] text-2xl mt-[0.8rem] mb-[2.5rem]`,
-  ctaContainer: `flex`,
-  accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#2181e2] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
-  accentedButton2: ` relative text-lg font-semibold px-12 py-4 bg-[#214d7a] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
-  cardContainer: `rounded-[3rem]`,
-  infoContainer: `h-20 bg-[#313338] p-4 rounded-b-lg flex items-center text-white`,
-  author: `justify-center ml-4`,
-  name: `text-2xl `,
-  button: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 `,
 
-}
 const Alchi = () => {
   const { address } = useWeb3()
 
@@ -51,7 +35,7 @@ const Alchi = () => {
                 
               </>
             ) : (
-              <div className={style.walletConnectWrapper}>
+              <div >
 
                 <div className='mx-auto p-2 '>
                 <span className="inline-flex items-center justify-center p-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">switch to your favorite network</span>
