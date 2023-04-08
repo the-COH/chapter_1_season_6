@@ -51,7 +51,7 @@ const title = [
   'Metal',
   'Glass',
   'Swamp',
-  'Eyeglasse',
+  'Eyeglasses',
   'Electricity',
   'Life',
   'Human',
@@ -139,12 +139,14 @@ const Marketpalce = () => {
                 description: meta.data.description
               }
             return item;
+            
               } catch (error) {
                 console.log('meta error')
               }
           })
         )
         setNfts(items)
+        console.log(items)
     } catch(e){
       console.log(e)
     }
@@ -178,7 +180,6 @@ const Marketpalce = () => {
                   key={id}
                   order={id}
                   nftItem={nftItem}
-                  title={title[nftItem.tokenId]}
                   tokenName={tokenName}
                 />
               ))}

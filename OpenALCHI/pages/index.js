@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <div className='w-full m-auto'>
+    <div className=''>
       <Header/>
       <Alchi/>
       <Footer/>
