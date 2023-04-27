@@ -252,7 +252,7 @@ const Profile = () => {
       <Header />
       { loading ?
          (<div className=" flex items-center justify-center h-screen">
-            <div className="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">loading...</div>
+            <div className="px-3 py-1 text-xs font-medium leading-none text-center  rounded-full animate-pulse bg-blue-900 text-blue-200">loading...</div>
           </div>
           ):
           (
@@ -280,7 +280,7 @@ const Profile = () => {
           </div>
           <div className=' ' >
             <div className='p-4 m-2 border rounded-lg'>
-            <span className="flex-1 ml-3 whitespace-nowrap dark:text-gray-200 ">NFT balance</span>
+            <span className="flex-1 ml-3 whitespace-nowrap text-gray-200 ">NFT balance</span>
             <div className=" m-auto p-2 flex flex-wrap justify-center ">
             
               {NftBanalce.map((nftItem, id) => (
@@ -300,7 +300,7 @@ const Profile = () => {
             </div>
           </div>
           <div className='p-4 m-2 border rounded-lg'>
-            <span className="flex-1 ml-3 whitespace-nowrap dark:text-gray-200">Listed NFT</span>
+            <span className="flex-1 ml-3 whitespace-nowrap text-gray-200">Listed NFT</span>
           
           <div className=" m-auto p-2 flex flex-wrap justify-center ">
             

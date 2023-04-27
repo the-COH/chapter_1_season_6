@@ -115,9 +115,9 @@ const style = {
   titleContainer: `text-4xl font-bold text-white mb-4`,
   info: `text-lg text-white mb-8`,
   priceValue: `flex justify-center  font-bold mt-2`,
-  button0: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center mr-2 mb-2 `,
-  button: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 `,
-  mintbutton: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`,
+  button0: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 focus:ring-gray-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center mr-2 mb-2 `,
+  button: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 focus:ring-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 `,
+  mintbutton: `text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 focus:ring-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`,
 }
 
 const Game = () => {
@@ -360,43 +360,43 @@ const Game = () => {
   return (
     <div className="bg-gray-700 h-screen ">
       <Header />
-      <aside className="fixed left-0 z-40 w-68 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar" >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <aside className="fixed left-0 top-12 z-40 w-68 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar" >
+        <div className="h-full px-3 py-4 overflow-y-auto  bg-gray-800">
           <ul className="space-y-2">
             <li>
-              <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <div className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                 <span className="ml-3">Balance </span>
                 <span className="ml-3 text-sky-400 "> {balance}</span>
-                <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">ALCHI</span>
+                <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium   rounded-full bg-gray-700 text-gray-300">ALCHI</span>
               </div>
             </li>
             <li>
-              <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <div className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                 <span className="ml-3">Mint Fee </span>
                 <span className="ml-3 text-sky-400 "> {mintFee}</span>
-                <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">ALCHI</span>
+                <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium   rounded-full bg-gray-700 text-gray-300">ALCHI</span>
               </div>
             </li>
             <li>
-              <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <div className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
               <span className="ml-3 text-sky-400 ">Buy ALCHI</span>
                 <li className="ml-3 "> {network?.chainId == 1088 ?
                       <a href="https://netswap.io/swap?inputCurrency=0x1d94cc954fce49db542a61d68901f787b874cf4b&outputCurrency/swap#/analytics/pairs/0xf2ad6d2bc50447c3688242c509a99bdd026ddcd7"
                         >
-                        <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">Netswap </span>
+                        <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium   rounded-full bg-gray-700 text-gray-300">Netswap </span>
                         
                       </a> : (network?.chainId == 7701 ? (
                         <a href="#"
-                          className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                          <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">CantoSwap</span>
+                          className=" hover: hover:text-white">
+                          <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium   rounded-full bg-gray-700 text-gray-300">CantoSwap</span>
                         </a>
                       ) : (network?.chainId == 7700 ? (
                       <a href="https://www.cantoswap.fi/#/swap?outputCurrency=0x5e8689741111442Eeb767507Fbf70BB5e8c3Bb6B">
-                        <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">CantoSwap</span>
+                        <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium   rounded-full bg-gray-700 text-gray-300">CantoSwap</span>
                       </a>)
                       : (
                         <a href="https://app.uniswap.org/#/tokens/optimism/0x36996c8642810add6c5bb814ed7a7ca8abc26fe0">
-                        <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">Uniswap</span>
+                        <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium   rounded-full bg-gray-700 text-gray-300">Uniswap</span>
                       </a>
                       )))
 
@@ -405,7 +405,7 @@ const Game = () => {
             </li>
             
             <li>
-              <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white ">
+              <div className="flex items-center p-2 text-base font-normal  rounded-lg text-white ">
                   <CgShoppingBag/>
                 <span className="flex-1 ml-3 whitespace-nowrap">NFT balance</span>
               </div>
@@ -425,7 +425,8 @@ const Game = () => {
 
         </div>
       </aside>
-      <div className="p-2 sm:ml-64">
+      
+      <div className=" sm:ml-64">
       {account === '0xD687ca2fa168e7BAbed632803F6E4b06ef98B764' ? (
                 <div>
                     <button className={style.button0} onClick={() => setfundAddress()}>setfundAdrress</button>
@@ -435,13 +436,13 @@ const Game = () => {
             : (
                 <div></div>
             )}
-        <div className=' p-2 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700' >
+        <div className=' p-2 border-2  border-dashed rounded-lg border-gray-700' >
         
-              <div className="flex flex-wrap items-center justify-center p-2 mb-2 rounded bg-gray-50 dark:bg-gray-800">
-              <p className="mb-2 p-4 font-light text-gray-400 dark:text-gray-300">To start you need first to have standard elements "Air", "Fire", "Earth" and "Water", total fee to mint is {4 * mintFee} ALCHI.</p>
+              <div className="flex flex-wrap items-center justify-center p-2 mb-2 rounded  bg-gray-800">
+              <p className="mb-2 p-4 font-light  text-gray-300">To start you need first to have standard elements "Air", "Fire", "Earth" and "Water", total fee to mint is {4 * mintFee} ALCHI.</p>
                 {loading ? (
                   <div className=" flex items-center justify-center">
-                  <div className="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">loading...</div>
+                  <div className="px-3 py-1 text-xs font-medium leading-none text-center   rounded-full animate-pulse bg-blue-900 text-blue-200">loading...</div>
                 </div>
 
                 ) : (
@@ -455,8 +456,8 @@ const Game = () => {
               </div>
               
               <div className="grid grid-cols-3 gap-4 mb-2">
-                <div className="flex flex-wrap items-center  justify-center  rounded bg-gray-50 dark:bg-gray-800">
-                  <label className="block m-1 text-sm font-medium text-gray-900 dark:text-white">Select element</label>
+                <div className="flex flex-wrap items-center  justify-center  rounded  bg-gray-800">
+                  <label className="block m-1 text-sm font-medium  text-white">Select element</label>
                   <Select
                     className='m-4'
                     value={elementA}
@@ -475,7 +476,7 @@ const Game = () => {
                      Fusion 
                   </button>
                 </div>
-                <div className="flex flex-wrap items-center justify-center  rounded bg-gray-50 dark:bg-gray-800">
+                <div className="flex flex-wrap items-center justify-center  rounded  bg-gray-800">
                   <img
                           width='20'
                           src={imagelist[elementB.value]}
@@ -487,12 +488,12 @@ const Game = () => {
                     onChange={setElementB}
                     options={elementsOptions}
                   />
-                  <label className="block m-1 text-sm font-medium text-gray-900 dark:text-white">Select element </label>
+                  <label className="block m-1 text-sm font-medium  text-white">Select element </label>
 
                 </div>
 
               </div>
-              <div className="flex flex-wrap items-center justify-center py-4 m-auto rounded bg-gray-50 dark:bg-gray-800">
+              <div className="flex flex-wrap items-center justify-center py-4 m-auto rounded  bg-gray-800">
                 
                 {resultat == '0' ?
                   (<div className=''> </div>) :
@@ -512,7 +513,7 @@ const Game = () => {
                           alt=""
                         />
                       </div>
-                      <div className='block m-2 text-sm font-medium dark:text-[#fc7d8b] '>You cant combine these elements </div>
+                      <div className='block m-2 text-sm font-medium text-[#fc7d8b] '>You cant combine these elements </div>
                     </div>
 
                     : (
@@ -526,7 +527,7 @@ const Game = () => {
                         <div className='flex p-2'>
                           {loading2 ? (
                             <div className=" flex items-center justify-center">
-                            <div className="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">loading...</div>
+                            <div className="px-3 py-1 text-xs font-medium leading-none text-center   rounded-full animate-pulse bg-blue-900 text-blue-200">loading...</div>
                           </div>
 
                           ) : (

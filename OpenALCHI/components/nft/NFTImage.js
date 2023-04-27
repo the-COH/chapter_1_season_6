@@ -10,7 +10,7 @@ const style = {
 const NFTImage = ({ selectedNft }) => {
   console.log(selectedNft)
   return (
-    <div className=' bg-white border border-gray-200 w-[18rem] h-[25rem] my-2 m-auto rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700'>
+    <div className=' border  w-[18rem] h-[25rem] my-2 m-auto rounded-lg shadow-md bg-gray-800 border-gray-700'>
       <div className={style.topBar}>
         <div className={style.topBarContent}>
           <IoMdSnow />

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Select, { components } from 'react-select';
 import { ethers } from 'ethers'
 import {useWeb3, useSwitchNetwork} from '@3rdweb/hooks'
-import {CgProfile, CgShoppingCart, CgListTree, CgImport, CgFormatJustify} from "react-icons/cg"
+import {CgProfile, CgShoppingCart, CgListTree, CgImport, CgFormatJustify, CgDanger} from "react-icons/cg"
 import logo from "../assets/logo.svg"
 
 const Header =()=>{
@@ -77,11 +77,11 @@ const Header =()=>{
         function handleClick() {
           setIsMenuHidden(!isMenuHidden);
         }   
-    return <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600" aria-label="Sidebar">     
-              <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href="/" className="flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+    return <nav className=" bg-gray-900 fixed w-full z-20 top-0 left-0 border-b  border-gray-600" aria-label="Sidebar">     
+              <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+                <Link href="/" className="flex items-center p-2  rounded-lg text-white  hover:bg-gray-700">
                 <Image 
-                  className="h-8 mr-3 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="h-8  transition duration-75 text-gray-400  group-hover:text-white"
                   src={logo} 
                   alt=''
                   />
@@ -90,13 +90,12 @@ const Header =()=>{
                   {address ? (
                     <span >  </span>
                   ): (
-                    <button className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm mx-4 px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
+                    <button className='text-white   focus:ring-4  font-medium rounded-lg text-sm mx-4 px-5 py-2.5  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800'
                           onClick={() => connectWallet('injected')}>
                             Connect Wallet
                           </button>
                   ) }
-                  <button data-collapse-toggle="navbar-sticky" onClick={handleClick} className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                    <span className="sr-only">Open main menu</span>
+                  <button data-collapse-toggle="navbar-sticky" onClick={handleClick} className="inline-flex items-center p-2 text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2  text-gray-400 hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                     <CgFormatJustify size={42} />
                   </button>
               </div>
@@ -108,7 +107,7 @@ const Header =()=>{
                           {address ? (
                             <>
                             <li>
-                            <ol className="flex items-center mx-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <ol className="flex items-center mx-4 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                               
                                 <Select
                                   value={networkId}
@@ -121,32 +120,34 @@ const Header =()=>{
                             </ol>
                           </li>
                             <li>
-                              <Link href="/Game" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                              <Link href="/Game" className="flex items-center p-2 text-base font-normal  rounded-lg text-white 0 hover:bg-gray-700">
                               <CgListTree/>
                               <span className="flex-1 ml-3 whitespace-nowrap">New Elements</span>
                               </Link>
                           </li>
-                          <li>
-                              <Link href="/Marketpalce" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                          {/* <li>
+                              <Link href="/Marketpalce" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                               <CgShoppingCart/>
                               <span className="flex-1 ml-3 whitespace-nowrap">Marketpalce</span>
                               </Link>
-                          </li>
+                          </li> */}
                           <li>
-                              <Link href="/Stake" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                              <Link href="/Stake" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                               <CgImport/>
                               <span className="flex-1 ml-3 whitespace-nowrap">StakeNFT</span>
                               </Link>
                           </li>
-                          <li>
-                              <Link  href="/Profile" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                          {/* <li>
+                              <Link  href="/Profile" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                                 <CgProfile/>
                               <span className="flex-1 ml-3 whitespace-nowrap">User</span>
                               </Link>
-                          </li>
+                          </li> */}
                             </>
                           ): (
-                            <div className=''>
+                            <div className='text-red-400 flex flex-wrap'>
+                              unsupported Network
+                              <CgDanger/>
                             </div>
                           )}
                           </div>
@@ -163,7 +164,7 @@ const Header =()=>{
                   {address ? (
                     <>
                     <li>
-                    <ol className="flex items-center mx-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <ol className="flex items-center mx-4 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                       
                         <Select
                           value={networkId}
@@ -176,25 +177,25 @@ const Header =()=>{
                     </ol>
                   </li>
                     <li>
-                      <Link href="/Game" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <Link href="/Game" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                       <CgListTree/>
                       <span className="flex-1 ml-3 whitespace-nowrap">New Elements</span>
                       </Link>
                   </li>
                   <li>
-                      <Link href="/Marketpalce" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <Link href="/Marketpalce" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                       <CgShoppingCart/>
                       <span className="flex-1 ml-3 whitespace-nowrap">Marketpalce</span>
                       </Link>
                   </li>
                   <li>
-                      <Link href="/Stake" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <Link href="/Stake" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                       <CgImport/>
                       <span className="flex-1 ml-3 whitespace-nowrap">StakeNFT</span>
                       </Link>
                   </li>
                   <li>
-                      <Link  href="/Profile" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <Link  href="/Profile" className="flex items-center p-2 text-base font-normal  rounded-lg text-white  hover:bg-gray-700">
                         <CgProfile/>
                       <span className="flex-1 ml-3 whitespace-nowrap">User</span>
                       </Link>

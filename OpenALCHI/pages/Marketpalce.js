@@ -170,7 +170,7 @@ const Marketpalce = () => {
       <div className='p-4 '>
         { loading ?
          (<div className=" flex items-center justify-center h-screen">
-            <div className="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">loading...</div>
+            <div className="px-3 py-1 text-xs font-medium leading-none text-center  rounded-full animate-pulse bg-blue-900 text-blue-200">loading...</div>
           </div>
           ):
           (<div className={''}>

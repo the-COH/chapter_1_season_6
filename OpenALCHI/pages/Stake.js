@@ -88,8 +88,8 @@ const title = [
   'Bitcoin',
 ]
 const style = {
-  button: ` bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 rounded-lg px-5 py-2.5 text-center mr-2 mb-2 `,
-  mintbutton: `bg-gradient-to-r from-gray-400 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 rounded-lg  px-5 py-2.5 text-center mr-2 mb-2`,
+  button: ` bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-gray-300 focus:ring-gray-800 rounded-lg px-5 py-2.5 text-center mr-2 mb-2 `,
+  mintbutton: `bg-gradient-to-r from-gray-400 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 focus:ring-gray-800 rounded-lg  px-5 py-2.5 text-center mr-2 mb-2`,
 }
 
 const Stake = () => {
@@ -449,7 +449,8 @@ const Stake = () => {
   return (
     <div className="bg-gray-700  ">
       <Header />
-      <div className="text-neutral m-2 flex items-center text-white">
+      <div className='h-10' ></div>
+      <div className="text-neutral  flex items-center text-white">
         
         <div>
           {account === '0xD687ca2fa168e7BAbed632803F6E4b06ef98B764' ? (
@@ -478,7 +479,7 @@ const Stake = () => {
           )}
         </div>
         
-        <div className="flex p-4 mb-4 text-sm rounded-lg bg-blue-50 dark:bg-gray-400 dark:text-gray-800" role="alert">
+        <div className="flex p-4 mb-4 text-sm rounded-lg  bg-gray-400 text-gray-800" role="alert">
             <CgAttachment/>
             <div>
               <span className="font-medium">Important!</span> Staking will be limited for 4  NFT Elements: Computer, Internet, Blockchain and Bitcoin
@@ -532,13 +533,13 @@ const Stake = () => {
                         type="number"
                         value={NFTamout}
                         onChange={onChangeHandler}
-                        className="sm:text-md  m-2 block rounded-lg border border-gray-300 bg-gray-50 p-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                        className="sm:text-md  m-2 block rounded-lg border   p-2    border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
                       ></input>
                       
                     </div>
                     {approvStake ? (loading2 ? (
                       <div className=" flex items-center justify-center">
-                        <div className="animate-pulse rounded-full bg-blue-200 px-3 py-1 text-center text-xs font-medium leading-none text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                        <div className="animate-pulse rounded-full  px-3 py-1 text-center text-xs font-medium leading-none  bg-blue-900 text-blue-200">
                           loading...
                         </div>
                       </div>
@@ -684,7 +685,7 @@ const Stake = () => {
             {totalstakedByUser ? (
               <div className="m-auto justify-between flex flex-wrap w-60">
                 {totalstakedByUser.map((i, key) => (
-                  <div className='bg-gray-500 border rounded-lg m-1 shadow-sm text-gray-200' key={key}>
+                  <div className='0 border rounded-lg m-1 shadow-sm text-gray-200' key={key}>
                     <span className="flex items-center justify-center p-2 text-xs">
                       {' '}
                       Index: {i.index}{' '}
@@ -710,7 +711,7 @@ const Stake = () => {
               </div>
             ) : (
               <div className=" flex items-center justify-center">
-                <div className="animate-pulse rounded-full bg-blue-200 px-3 py-1 text-center text-xs font-medium leading-none text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                <div className="animate-pulse rounded-full bg-blue-200 px-3 py-1 text-center text-xs font-medium leading-none text-blue-800 bg-blue-900 text-blue-200">
                   loading...
                 </div>
               </div>
